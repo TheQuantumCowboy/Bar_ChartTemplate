@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 # In[58]:
 import matplotlib.pyplot as plt
 import numpy as np
@@ -20,6 +19,19 @@ y_1 = [1428,1589,1417,1522,1467,1525,1499,1537]
 y_2 = [1523,1493,1498,1462,1466,1553,1454,1447]
 y_3 = [960,958,925,960,1048,1099,921,975]
 
+#create legend
+
+A_1 = mpatches.Patch(color='blue', label='A-1')
+D_2 = mpatches.Patch(color='red', label='D-2')
+E_1 = mpatches.Patch(color='cadetblue', label='E-1')
+F_2 = mpatches.Patch(color='green', label='F-2')
+G_2 = mpatches.Patch(color='brown', label='G-2')
+G_4 = mpatches.Patch(color='midnightblue', label='G-4')
+G_5 = mpatches.Patch(color='gray', label='G-5')
+G_6 = mpatches.Patch(color='black', label='G-6')
+plt.legend(handles=[A_1,D_2,E_1,F_2,G_2,G_4,G_5,G_6], fontsize = 18)
+
+
 #Plot Graph 1
 
 plt.xlabel('Item Measured', fontsize=22)
@@ -32,17 +44,6 @@ plt.bar(x_3,y_3, color=['blue','red','cadetblue','green','brown','midnightblue',
 plt.xticks([10,20,30,40],['Gob','Blank Mold\n w/ Gob','Parison','Empty\n Blank Mold'], fontsize=16)
 plt.yticks([0,250,500,750,1000,1250,1500,1750,2000], fontsize= 16)
 
-#plot legend
-
-A_1 = mpatches.Patch(color='blue', label='A-1')
-D_2 = mpatches.Patch(color='red', label='D-2')
-E_1 = mpatches.Patch(color='cadetblue', label='E-1')
-F_2 = mpatches.Patch(color='green', label='F-2')
-G_2 = mpatches.Patch(color='brown', label='G-2')
-G_4 = mpatches.Patch(color='midnightblue', label='G-4')
-G_5 = mpatches.Patch(color='gray', label='G-5')
-G_6 = mpatches.Patch(color='black', label='G-6')
-plt.legend(handles=[A_1,D_2,E_1,F_2,G_2,G_4,G_5,G_6], fontsize = 18)
 
 #set graph size
 
@@ -71,7 +72,7 @@ G_4 = mpatches.Patch(color='midnightblue', label='G-4')
 G_5 = mpatches.Patch(color='gray', label='G-5')
 G_6 = mpatches.Patch(color='black', label='G-6')
 
-#now plot
+# plot graph 2
 plt.bar(x_4,y_3, color=['blue','red','cadetblue','green','brown','midnightblue','gray','black'])
 plt.bar(x_5,y_4, color=['blue','red','cadetblue','green','brown','midnightblue','gray','black'])
 plt.bar(x_6,y_5, color=['blue','red','cadetblue','green','brown','midnightblue','gray','black'])
@@ -82,6 +83,7 @@ plt.title('Max Temperatures on Various Shops', fontsize=36)
 plt.xlabel('Item Measured', fontsize=22)
 plt.ylabel('Temperature (F)',fontsize=22)
 
+#set graph size
 
 fig = plt.gcf()
 fig.set_size_inches(18.5, 12)
